@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="snapspot" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Y3-UO-zVX">
+                                <rect key="frame" x="0.0" y="509" width="600" height="91"/>
+                                <color key="backgroundColor" red="0.3946079333811775" green="0.69141815685211427" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="91" id="HdJ-uN-2Jx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="share trip">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yTC-cg-WgE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="hello world" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UL7-XQ-ylq">
+                                <rect key="frame" x="258" y="21" width="84" height="19"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JkA-xZ-ZwG">
+                                <rect key="frame" x="0.0" y="419" width="600" height="91"/>
+                                <color key="backgroundColor" red="1" green="0.32546732274017387" blue="0.4003180758034337" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="91" id="BjI-K1-g1V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="End trip">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="endTripPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="GeZ-jz-LhP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="JkA-xZ-ZwG" secondAttribute="width" id="0Bq-ac-Atw"/>
+                            <constraint firstItem="4Y3-UO-zVX" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="2Tq-pC-wRj"/>
+                            <constraint firstItem="UL7-XQ-ylq" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="21" id="5er-LJ-Poo"/>
+                            <constraint firstItem="4Y3-UO-zVX" firstAttribute="top" secondItem="JkA-xZ-ZwG" secondAttribute="bottom" id="Bs9-As-2yy"/>
+                            <constraint firstItem="4Y3-UO-zVX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Dgr-ks-o2M"/>
+                            <constraint firstItem="UL7-XQ-ylq" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="VhM-aR-FeO"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="4Y3-UO-zVX" secondAttribute="bottom" id="cig-oQ-DzF"/>
+                            <constraint firstItem="4Y3-UO-zVX" firstAttribute="centerX" secondItem="UL7-XQ-ylq" secondAttribute="centerX" id="e7D-HK-NwE"/>
+                            <constraint firstAttribute="centerX" secondItem="JkA-xZ-ZwG" secondAttribute="centerX" id="fzg-3Y-MNb"/>
+                            <constraint firstItem="UL7-XQ-ylq" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="nEl-TN-Xxy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="endTripButton" destination="JkA-xZ-ZwG" id="L18-v7-QKR"/>
+                        <outlet property="shareTripButton" destination="4Y3-UO-zVX" id="aur-9f-88L"/>
+                        <outlet property="statusLabel" destination="UL7-XQ-ylq" id="sl1-We-oG3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="321" y="509"/>
+        </scene>
+    </scenes>
+</document>
